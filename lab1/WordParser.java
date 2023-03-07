@@ -15,11 +15,11 @@ public class WordParser {
     public Map<String, Integer> parseFile (InputStreamReader input) throws IOException {
         Map<String, Integer> words = new HashMap<String, Integer>();
         StringBuilder newWord = new StringBuilder();
-        int notNewLetter = input.read();
+        int newSymbol = input.read();
         char newLetter;
 
-        while (notNewLetter != -1) {
-            newLetter = (char)notNewLetter;
+        while (newSymbol != -1) {
+            newLetter = (char)newSymbol;
             if (Character.isLetterOrDigit(newLetter)) {
                 newWord.append(newLetter);
             }
@@ -28,7 +28,7 @@ public class WordParser {
                 newWord.setLength(0);
                 wordsCounter++;
             }
-            notNewLetter = input.read();
+            newSymbol = input.read();
         }
 
         if (newWord.length() > 0) {

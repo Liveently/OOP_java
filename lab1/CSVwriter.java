@@ -2,7 +2,6 @@ package org.example;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Map;
 
 public class CSVwriter {
