@@ -1,0 +1,20 @@
+# x+2=4
+DEFINE a 1
+DEFINE b -3
+DEFINE c 2
+PUSH b
+PUSH b
+*
+PUSH 4
+PUSH a
+PUSH c
+*
+*
+-
+PUSH b
+-
+PUSH 2
+PUSH a
+*
+/
+PRINT
