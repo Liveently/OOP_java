@@ -1,16 +1,17 @@
 package lab2.Commands;
 
+import lab2.Commands.Command;
 import lab2.Context;
 import lab2.Exceptions.CalculatorException;
-import lab2.Exceptions.Wrong_amount_of_args_exception;
+import lab2.Exceptions.wrongAmountOfArgsException;
 
 
 public class COMMENT implements Command {
 
     @Override
-    public void do_command(Context context, String[] arguments) throws CalculatorException {
+    public void doCommand(Context context, String[] arguments) throws CalculatorException {
         if(arguments.length < 2){
-            throw new Wrong_amount_of_args_exception("This is empty commentary!");
+            throw new wrongAmountOfArgsException("This is empty commentary!");
         }
         else{
             for(int i = 1; i < arguments.length; i++){

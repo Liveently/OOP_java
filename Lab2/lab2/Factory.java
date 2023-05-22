@@ -22,7 +22,6 @@ public class Factory {
             InputStream resource = Factory.class.getClassLoader().getResourceAsStream("Config.properties");
             p = new Properties();
 
-            out.println(resource);
 
             if(resource != null){
                 p.load(resource);
@@ -44,7 +43,7 @@ public class Factory {
         return factory;
     }
 
-    public Command make_command(String[] arguments){
+    public Command makeCommand(String[] arguments){
         Command command = null;
         String className;
 

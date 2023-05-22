@@ -1,6 +1,5 @@
 package lab2.Exceptions;
 
-
 public class CalculatorException extends Exception{
 
     public CalculatorException(String str){

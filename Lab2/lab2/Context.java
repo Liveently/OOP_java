@@ -12,11 +12,7 @@ public class Context {
         return stack.pop();
     }
 
-    public void push(Double num){
-        stack.push(num);
-    }
-
-    public void put_variable(String variable, Double value){
+    public void putVariable(String variable, Double value){
         if(map.containsKey(variable)){
             map.replace(variable, value);
         }else{
@@ -24,19 +20,24 @@ public class Context {
         }
     }
 
-    public Double get_variable_val(String variable){
+    public Double getVariableVal(String variable){
         return map.get(variable);
     }
 
-    public boolean isVariable_in_stack(String variable){
+    public boolean isVariableInStack(String variable){
         return map.containsKey(variable);
     }
 
-    public int stack_size(){
+    public int stackSize(){
         return stack.size();
     }
 
+    public void push(Double num){
+        stack.push(num);
+    }
+
     public Double peek_stack(){
+
         return stack.peek();
     }
 }

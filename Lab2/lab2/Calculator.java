@@ -17,7 +17,7 @@ public class Calculator {
 
     public Calculator(){}
 
-    public void ran_calc(InputStream input){
+    public void ranCalc(InputStream input){
         var bufferedReader = new BufferedReader(new InputStreamReader(input));
 
         String arguments;
@@ -30,9 +30,13 @@ public class Calculator {
                     break;
                 }else{
                     logger.log(Level.INFO, "Create command..." + Arrays.toString(arguments.split(" ", 1)));
-                    command = Factory.getInstance().make_command(arguments.split(" "));
+
+
+                    Factory.getInstance();
+
+                    command = Factory.getInstance().makeCommand(arguments.split(" "));
                     if(command != null){
-                        command.do_command(context, arguments.split(" "));
+                        command.doCommand(context, arguments.split(" "));
                     }
                 }
             }
